@@ -197,8 +197,8 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 2} },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 2} },
 };
 
 static MouseShortcut maltshortcuts[] = {
@@ -504,9 +504,4 @@ static char ascii_printable[] =
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
 
-/*
- * plumb_cmd is run on mouse button 3 click, with argument set to
- * current selection and with cwd set to the cwd of the active shell
- */
-static char *plumb_cmd = "plumb";
 
